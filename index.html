@@ -18,6 +18,7 @@
       /* 添加自定义字体 */
       @font-face {
         font-family: 'BC Font';
+        /* 重要：确保 'bc.ttf' 文件与 index.html 在同一目录或提供正确路径 */
         src: url('bc.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
@@ -116,11 +117,11 @@
 
       /* 可以取消注释以隐藏默认箭头 */
       /*
-    .pagination-item--next a::before,
-    .pagination-item--previous a::after {
-         display: none;
-    }
-    */
+      .pagination-item--next a::before,
+      .pagination-item--previous a::after {
+           display: none;
+      }
+      */
 
       .pagination-item--previous a {
         text-align: left; /* 上一页按钮文字左对齐 */
@@ -134,14 +135,17 @@
     <div id="app">加载中...</div>
     <script>
       window.$docsify = {
-        name: "用户手册", // 可以设置文档名称
-        repo: 'ItosEO/AppHelpPage', // 如果有仓库可以取消注释
-        loadSidebar: true, // 加载 _sidebar.md
+        name: "用户手册",
+        // repo: 'ItosEO/AppHelpPage',
+        loadSidebar: true,
         alias: {
-          "/_sidebar.md": "/_sidebar.md", // 明确侧边栏路径
+          '/_sidebar.md': '/_sidebar.md' // 明确侧边栏路径
         },
         subMaxLevel: 5, // 侧边栏最大层级
         auto2top: true, // 切换页面后自动滚动到顶部
+
+        // --- 启用封面页 ---
+        coverpage: true, // <--- 已添加此行以启用封面页
 
         // --- 搜索插件配置 ---
         search: {
@@ -155,7 +159,7 @@
         // --- Flexible Alerts 插件配置 ---
         flexibleAlerts: {
           style: "flat", // 可选 'flat', 'callout', 'simple'
-          note: { label: "注意" }, // 自定义标签和图标（可选）
+          note: { label: "注意" }, // 自定义标签
           tip: { label: "提示" },
           warning: { label: "警告" },
           danger: { label: "危险" },
@@ -164,16 +168,16 @@
         // --- 分页插件配置 ---
         pagination: {
           previousText: "上一篇", // 自定义上一页按钮文本
-          nextText: "下一篇", // 自定义下一页按钮文本
-          crossChapter: true, // 允许跨章节翻页 (基于 _sidebar.md)
-          crossChapterText: true, // 在按钮上显示章节标题
+          nextText: "下一篇",     // 自定义下一页按钮文本
+          crossChapter: true,    // 允许跨章节翻页 (基于 _sidebar.md)
+          crossChapterText: true // 在按钮上显示章节标题
         },
 
         // --- 复制代码插件配置 ---
         copyCode: {
-          buttonText: "复制", // 自定义按钮文字
-          errorText: "错误",
-          successText: "已复制!",
+          buttonText : '复制', // 自定义按钮文字
+          errorText  : '错误',
+          successText: '已复制!'
         },
       };
     </script>
