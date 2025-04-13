@@ -10,6 +10,9 @@
 * ✓ 使用说明
 * ✓ 常见问题
 
+**⚠ 不要去系统升级系统 不要去更新系统参数**
+**效果会变差**
+
 <p class="buttons">
   <a href="https://fk.qkrxr.cn/shop/itostar" target="_blank" class="button">获取卡密</a>
   <a href="https://down.itostar.com.cn/PremiumApp" target="_blank" class="button">网盘</a>
